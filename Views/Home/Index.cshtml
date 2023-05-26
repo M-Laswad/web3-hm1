@@ -1,0 +1,20 @@
+﻿<form asp-action="ReverseName" method="post" class="form">
+    <div>
+        <label for="name">Enter value:</label>
+        <input type="text" name="name"/>
+    </div>
+    <input type="submit"/>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    @if (ViewBag.Message == "Please enter a valid name.")
+    {
+        <p>Please enter a valid value.</p>
+    }
+    else
+    {
+        <p>Your reversed name is: </p>
+        <p>@ViewBag.Message</p>
+    }
+}
